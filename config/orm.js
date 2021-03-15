@@ -1,3 +1,5 @@
+const { brotliCompress } = require("zlib");
+const { query } = require("../config/connection.js");
 var connection = require("../config/connection.js");
 
 // function helps add ? depending on the amount of values being passed.
@@ -28,5 +30,71 @@ function objToSql(ob) {
     return arr.toString();
 };
 
+var orm = {
+    // select all
+    all: function(tableInput, cb) {
+        var queryString = "SELECT * FROM " + tableInput + ";";
+        connection.query(queryString, function(err, result) {
+            if(err) {
+                throw err
+            }
+            cb(result);
+        });
+    },
+    // adding values
+    create: function(table, cols, vals, cb) {
+        var queryString = "INSERT INTO " + table;
 
+        queryString += " (";
+        // adds the values of the columns with data being added in a string format
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        // calling the helper function above.
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
+        
+        console.log(queryString);
 
+        connection.query(queryString, function(err, result) {
+            if(err) {
+                throw err
+            }
+            cb(result);
+        });
+    },
+
+    // udating an existing task
+    update: function(table, objColVals, condition, cb) {
+        var queryString = "UPDATE " + table;
+
+        queryString += " SET ";
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += condition;
+
+        console.log(queryString);
+        connection.query(queryString, function(err, result) {
+            if(err) {
+                throw err;
+            } 
+            cb(result);
+        });
+    },
+
+    delete: function(table, condition, cb) {
+        var queryString = "DELETED FROM " + table;
+
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function(err, result) {
+            if(err) {
+                throw err;
+            } 
+            cb(result)
+        });
+    }
+}
+
+module.exports = orm;
