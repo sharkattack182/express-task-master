@@ -17,7 +17,7 @@ function objToSql(ob) {
 
     for(var key in ob) {
         var value = ob[key];
-        if(Obkect.hasOwnProperty.call(ob, key)) {
+        if(Object.hasOwnProperty.call(ob, key)) {
             // checks to make sure that if the value has spaces to add quotations around it as long as the space isnt the first past of the value
             if(typeof value === "string" && value.indexOf(" ") >= 0) {
                 vale = "'" + value + "'";

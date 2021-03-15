@@ -9,3 +9,15 @@
         {{/unless}}
     {{/each}}
 </ul>
+
+<h2>Completed Tasks</h2>
+
+<ul>
+    {{#each tasks}}
+        {{#if completed}}
+            <strong>{{task_name}}</strong>
+            {{task_description}}
+        {{/if}}
+    {{/each}}
+
+</ul>
