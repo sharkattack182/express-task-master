@@ -44,25 +44,26 @@ var orm = {
     // adding values
     create: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
-
+    
         queryString += " (";
-        // adds the values of the columns with data being added in a string format
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        // calling the helper function above.
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
-        
+    
         console.log(queryString);
 
-        connection.query(queryString, function(err, result) {
-            if(err) {
-                throw err
-            }
-            cb(result);
+        console.log(vals)
+    
+        connection.query(queryString, vals, function(err, result) {
+          if (err) {
+            throw err;
+          }
+    
+          cb(result);
         });
-    },
+      },
 
     // udating an existing task
     update: function(table, objColVals, condition, cb) {

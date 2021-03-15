@@ -21,5 +21,20 @@ $(function() {
 
 
     // handle form subit
+    $(".create-form").on("submit", function(event) {
+        event.preventDefault();
 
+        var newTask = {
+            task_name: $("#task_name").val().trim(),
+            task_description: $("#task_description").val().trim()
+        };
+
+        $.ajax("/api/tasks", {
+            type: "POST",
+            data: newTask
+        }).then(function() {
+            console.log("Task Created");
+            location.reload();
+        })
+    })
 })

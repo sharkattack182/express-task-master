@@ -28,6 +28,17 @@ router.put("/api/tasks/:id", function(req, res) {
             res.status(200).end();
         }
     })
-})
+});
+
+router.post("/api/tasks", function(req, res) {
+    task.create([
+      "task_name", "task_description"
+    ], [
+      req.body.task_name, req.body.task_description
+    ], function(result) {
+      // Send back the ID of the new quote
+      res.json({ id: result.insertId });
+    });
+  });
 
 module.exports = router;
