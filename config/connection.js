@@ -2,7 +2,7 @@ var mysql = require("mysql");
 
 var connection = mysql.createConnection({
     host: "localhost",
-    port: "5500",
+    port: "3306",
     user: "root",
     password: "rootroot",
     database: "tasks_db"
