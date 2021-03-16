@@ -37,4 +37,9 @@ $(function() {
             location.reload();
         })
     })
+
+    $(".adder-reveal").on("click", function() {
+        $(this).remove()
+        $(".adder").show();
+    })
 })
