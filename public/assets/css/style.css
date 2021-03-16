@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #05386B;
+    width: 100vw;
 }
 
 .jumbotron {
@@ -33,26 +34,49 @@ body {
 }
 
 
-.header {
+.header, .sub-header{
     text-align: right;
 }
 
 .header h1 {
     font-size: 8rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-family: 'Trocchi', serif;
     margin-right: 2rem;
     color: #EDF5E1;
+    margin-bottom: 0;
 }
+
+.sub-header h3 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-right: 2rem;
+    color: #EDF5E1;
+    margin-top: 0;
+    margin-bottom: 15rem;
+}
+
+
+
+
+
+
 
 .tasks {
     position: absolute;
     right: 2.5rem;
-    /* background-color: #EDF5E1; */
+    font-family: 'Trocchi', serif;
     background-color: #8EE4AF;
     width: 57vw;
     display: inline-flex;
     border-radius: 25px;
+    font-size: 1.2em;
+    
+}
+
+.tasks h2 {
+    color: #05386B;
 }
 
 .to-complete {
@@ -64,7 +88,7 @@ body {
 .completed {
     width: 50%;
     text-align: center;
-    float: right;
+    
 }
 
 .light-circle {
@@ -84,8 +108,48 @@ ul {
 
 ul li {
     list-style-type: none;
-    padding: 0 !important;
+    padding-bottom: 1em;
+    padding-top: .8em;
     text-align: center;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #379683;
+    position: relative;
+    width: 90%;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+button {
+    padding: 0;
+}
+.far {
+    padding: 0;
+    font-size: 1.8rem;
+    position: absolute;
+    right: .4em;
+    top: 1.5em;
+}
+
+.fas { 
+    padding: 0;
+    font-size: 1.8rem;
+    position: absolute;
+    right: .4em;
+    top: 1.5em;
+}
+li p {
+    font-size: 1rem;
+    padding: 0
+}
+
+strong {
+    padding-bottom: 0;
+}
+
+.completed-li p {
+    visibility: hidden;
 }
 
 
