@@ -13,7 +13,7 @@ body {
 }
 
 .container-1 {
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
 }
 
 .task-header {
@@ -68,9 +68,11 @@ body {
     margin-right: 2rem;
     font-size: 1.5rem;
     padding: .5em;
-    background-color: #379683;
+    background-color: #8EE4AF;
+    color: #05386B;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #EDF5E1;
+    border: none;
+    border-radius: 5%;
 }
 
 .adder {
@@ -81,26 +83,65 @@ body {
     border-radius: 25px;
     height: fit-content;
     align-content: flex-end;
-    text-align: right;
     float: right;
     display: none;
 }
 
 .adder form {
     padding: 2rem;
+    padding-top: 1rem;
+    color: #05386B;
+}
+
+::placeholder {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    color: #05386B;
+    opacity: 70%;
 }
 
 .adder h2 {
-    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 2.8rem;
+    font-family: 'Trocchi', serif;
+    color: #05386B;
 }
 
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #05386B;
+    width: 90%;
+    font-size: 1.4rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-image-source: linear-gradient(45deg, #05386B,transparent);
+  border-image-slice: 1;
+}
+
+.submit-task {
+ margin-top: 1rem;
+ font-size: 1.6rem;
+ padding: .5rem;
+ float: right;
+ margin-bottom: 1rem;
+ background-color: #05386B;
+ color: #EDF5E1;
+ font-family: 'Trocchi', serif;
+ border: none;
+ border-radius: 5%;
+}
+
+#task_name {
+    width: 50% !important
+}
 
 .tasks {
     margin-right: 2rem;
     float: right;
     font-family: 'Trocchi', serif;
     background-color: #8EE4AF;
-    width: 57vw;
+    width: 85vw;
     display: inline-flex;
     border-radius: 25px;
     font-size: 1.2em;

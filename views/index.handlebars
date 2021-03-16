@@ -10,23 +10,23 @@
 
     
 <button class="adder-reveal">
-    Click to add a task
+   <strong>Click to add a task</strong> 
 </button>
 
 <section class="adder">
-<h2>Add a New task</h2>
+<h2>Add a Task </h2>
 <form class="create-form">
     
     <div class="form-group">
-        <label for="name">Task Name: </label>
-        <input type="text" id="task_name" name="task_name">
+        {{!-- <label for="name">TASK NAME </label> --}}
+        <input type="text" id="task_name" name="task_name" placeholder="TASK NAME">
     </div>
     <div class="form-group">
-        <label for="task_description">Task Description: </label>
-        <input type="text" id="task_description" name="task_description">
+        {{!-- <label for="task_description">TASK DESCRIPTION </label> --}}
+        <input type="text" id="task_description" name="task_description" placeholder="TASK DESCRIPTION">
     </div>
 
-    <button type="submit">Add Task</button>
+    <button type="submit" class="submit-task">Add Task</button>
 </form>
 
 </section>
