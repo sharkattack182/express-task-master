@@ -1,43 +1,39 @@
-
 <div class="container-1">
     <div class="jumbotron">
-    <div class="header">
-        <h1>Task Master</h1>
+        <div class="header">
+            <h1>Task Master</h1>
+        </div>
+        <div class="sub-header">
+            <h3>Helping you get the important things done</h3>
+        </div>
+
+        <button class="adder-reveal"><strong>Click to add a task</strong></button>
+
+        <section class="adder">
+            <h2>Add a Task </h2>
+            <form class="create-form">
+
+                <div class="form-group">
+                    {{!-- <label for="name">TASK NAME </label> --}}
+                    <input type="text" id="task_name" name="task_name" placeholder="TASK NAME">
+                </div>
+                <div class="form-group">
+                    {{!-- <label for="task_description">TASK DESCRIPTION </label> --}}
+                    <input type="text" id="task_description" name="task_description" placeholder="TASK DESCRIPTION">
+                </div>
+
+                <button type="submit" class="submit-task">Add Task</button>
+            </form>
+
+        </section>
+
+        <div class="green-circle"></div>
+        {{!-- <div class="white-circle"></div>
+        <div class="green-circle"></div>
+        <h1 class="header">TASK MASTER</h1>
+        <p class="sub-header">We Help you stay on track for what's important</p>
+        <img class="task-header" src="https://www.integrify.com/site/assets/files/2370/task-flow.gif" alt="task"> --}}
     </div>
-    <div class="sub-header">
-        <h3>Helping you get the important things done</h3>
-    </div>
-
-    
-<button class="adder-reveal">
-   <strong>Click to add a task</strong> 
-</button>
-
-<section class="adder">
-<h2>Add a Task </h2>
-<form class="create-form">
-    
-    <div class="form-group">
-        {{!-- <label for="name">TASK NAME </label> --}}
-        <input type="text" id="task_name" name="task_name" placeholder="TASK NAME">
-    </div>
-    <div class="form-group">
-        {{!-- <label for="task_description">TASK DESCRIPTION </label> --}}
-        <input type="text" id="task_description" name="task_description" placeholder="TASK DESCRIPTION">
-    </div>
-
-    <button type="submit" class="submit-task">Add Task</button>
-</form>
-
-</section>
-
-    <div class="green-circle"></div>
-    {{!-- <div class="white-circle"></div>
-    <div class="green-circle"></div>
-    <h1 class="header">TASK MASTER</h1>
-    <p class="sub-header">We Help you stay on track for what's important</p>
-    <img class="task-header" src="https://www.integrify.com/site/assets/files/2370/task-flow.gif" alt="task"> --}}
-</div>
 </div>
 
 
@@ -63,7 +59,7 @@
             {{#each tasks}}
             {{#if completed}}
             <li>
-                <strong class ="completed-name">{{task_name}}</strong>
+                <strong class="completed-name">{{task_name}}</strong>
                 <br>
                 <p>{{task_description}}</p>
                 <i class="fas fa-check-square"></i>
@@ -78,3 +74,5 @@
 
 
 <div class="light-circle"></div>
+
+{{!-- <div class="third-circle"></div> --}}
