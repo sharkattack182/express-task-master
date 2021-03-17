@@ -39,6 +39,8 @@ $(function() {
     })
 
     $(".adder-reveal").on("click", function() {
+
+        console.log("Clicked")
         $(this).remove()
         $(".adder").show();
     })
