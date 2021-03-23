@@ -121,13 +121,12 @@ form {
     opacity: 70%;
 }
 
-.adder h2 {
-    padding-left: 2rem;
-    font-size: 2.8rem;
-    font-family: 'Trocchi', serif;
-    color: #05386B;
+.modal-title strong {
+    margin: 0 1em 0;
+    font-size: 2rem  !important;
+    font-family: 'Trocchi', serif !important;
+    color: #05386B  !important;
 }
-
 input {
     border: 0;
     outline: 0;
@@ -441,12 +440,11 @@ li p {
 
 
 
-.adder h2 {
+.modal-title strong {
     margin: 0 3.3rem 0;
-    font-size: 2rem;
-    padding: 1rem 0 0;
-    font-family: 'Trocchi', serif;
-    color: #05386B;
+    font-size: 2rem  !important;
+    font-family: 'Trocchi', serif !important;
+    color: #05386B  !important;
 }
     }
 
