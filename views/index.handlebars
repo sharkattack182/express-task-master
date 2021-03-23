@@ -1,82 +1,102 @@
-
 <div class="viewport">
-<div class="container-1">
-    <div class="jumbotron">
-        <div class="header">
-            <h1>Task Master</h1>
-        </div>
-        <div class="sub-header">
-            <h3>Helping you get the important things done</h3>
-        </div>
+    <div class="container-1">
+        <div class="jumbo">
+            <div class="header">
+                <h1>Task Master</h1>
+            </div>
+            <div class="sub-header">
+                <h3>Helping you get the important things done</h3>
+            </div>
 
-        <button class="adder-reveal"><strong>Click to add a task</strong></button>
+            <!-- Button trigger modal -->
+<button type="button" class="adder-reveal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <strong>Click to add a task</strong>
+</button>
 
-        <section class="adder">
-            <h2>Add a Task </h2>
-            <form class="create-form">
+<!-- Modal -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-dialog-centered ">
+    <div class="modal-content custom">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><h2>Add a Task </h2></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                <form class="create-form">
 
-                <div class="form-group">
-                    {{!-- <label for="name">TASK NAME </label> --}}
-                    <input type="text" id="task_name" name="task_name" placeholder="TASK NAME">
-                </div>
-                <div class="form-group">
-                    {{!-- <label for="task_description">TASK DESCRIPTION </label> --}}
-                    <input type="text" id="task_description" name="task_description" placeholder="TASK DESCRIPTION">
-                </div>
+                    <div class="form-group">
+                        {{!-- <label for="name">TASK NAME </label> --}}
+                        <input type="text" id="task_name" name="task_name" placeholder="TASK NAME">
+                    </div>
+                    <div class="form-group">
+                        {{!-- <label for="task_description">TASK DESCRIPTION </label> --}}
+                        <input type="text" id="task_description" name="task_description" placeholder="TASK DESCRIPTION">
+                    </div>
 
-                <button type="submit" class="submit-task">Add Task</button>
-            </form>
-
-        </section>
-
-        <div class="green-circle"></div>
-        {{!-- <div class="white-circle"></div>
-        <div class="green-circle"></div>
-        <h1 class="header">TASK MASTER</h1>
-        <p class="sub-header">We Help you stay on track for what's important</p>
-        <img class="task-header" src="https://www.integrify.com/site/assets/files/2370/task-flow.gif" alt="task"> --}}
+                    <button type="submit" class="submit-task">Add Task</button>
+                </form>
+      </div>
     </div>
+  </div>
 </div>
 
+            {{!-- <button class="adder-reveal"><strong>Click to add a task</strong></button>
+
+            <section class="adder">
 
 
+            </section> --}}
 
-
-<section class="tasks">
-    <div class="to-complete">
-        <h2>Tasks to be completed</h2>
-
-        <ul>
-            {{#each tasks}}
-            {{#unless completed}}
-            {{> tasks/task-block completed = true}}
-            {{/unless}}
-            {{/each}}
-        </ul>
+            <div class="green-circle"></div>
+            {{!-- <div class="white-circle"></div>
+            <div class="green-circle"></div>
+            <h1 class="header">TASK MASTER</h1>
+            <p class="sub-header">We Help you stay on track for what's important</p>
+            <img class="task-header" src="https://www.integrify.com/site/assets/files/2370/task-flow.gif" alt="task">
+            --}}
+        </div>
     </div>
-    <div class="completed">
-        <h2>Completed Tasks</h2>
-
-        <ul class="completed-li">
-            {{#each tasks}}
-            {{#if completed}}
-            <li>
-                <strong class="completed-name">{{task_name}}</strong>
-                <br>
-                <p>{{task_description}}</p>
-                <i class="fas fa-check-square"></i>
-            </li>
-
-            {{/if}}
-            {{/each}}
-
-        </ul>
-    </div>
-</section>
 
 
-<div class="light-circle"></div>
+
+
+
+    <section class="tasks">
+        <div class="to-complete">
+            <h2>Tasks to be completed</h2>
+
+            <ul>
+                {{#each tasks}}
+                {{#unless completed}}
+                {{> tasks/task-block completed = true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="completed">
+            <h2>Completed Tasks</h2>
+
+            <ul class="completed-li">
+                {{#each tasks}}
+                {{#if completed}}
+                <li>
+                    <strong class="completed-name">{{task_name}}</strong>
+                    <br>
+                    <p>{{task_description}}</p>
+                    <i class="fas fa-check-square"></i>
+                </li>
+
+                {{/if}}
+                {{/each}}
+
+            </ul>
+        </div>
+    </section>
+
+
+    <div class="light-circle"></div>
 </div>
+
 
 
 {{!-- <div class="third-circle"></div> --}}

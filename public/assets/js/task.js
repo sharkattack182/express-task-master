@@ -43,5 +43,10 @@ $(function() {
         console.log("Clicked")
         $(this).remove()
         $(".adder").show();
-    })
+    });
+
+
+
+
+
 })
