@@ -611,5 +611,15 @@ strong {
             top: -18rem;
         
         }
+
+
+        .far {
+            padding: 0;
+            font-size: 1.8rem;
+            position: absolute;
+            right: 50%;
+            top: 3.7em;
+            
+        }
         
     }
