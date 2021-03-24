@@ -500,7 +500,7 @@ li p {
     width: 35rem;
     border-radius: 25rem;
     position: absolute;
-    left: -5rem;
+    left: -6rem;
     top: -33rem;;
 
 };
@@ -555,8 +555,6 @@ strong {
 };
 
 .custom {
-    background-color: #8EE4AF !important;
-    border-radius: 20px !important;
     height: 50vh !important;
 }
 
