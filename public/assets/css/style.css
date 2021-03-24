@@ -511,7 +511,7 @@ li p {
 
 .list-items {
     width: 80%;
-    /* min-height: 500px; */
+    min-height: 150px;
 }
 
 li p {
