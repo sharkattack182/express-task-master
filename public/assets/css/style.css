@@ -501,9 +501,13 @@ li p {
     border-radius: 25rem;
     position: absolute;
     left: -7rem;
-    top: -5rem;
+    top: -23rem;;
 
 };
+
+.blue-circle {
+    display: none;
+}
 
 .list-items {
     width: 80%;
