@@ -554,5 +554,11 @@ strong {
 
 };
 
+.custom {
+    background-color: #8EE4AF !important;
+    border-radius: 20px !important;
+    height: 50vh !important;
+}
+
 
     }
