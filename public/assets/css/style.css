@@ -579,3 +579,37 @@ strong {
         
         };
       }
+
+
+      @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 812px) 
+      and (-webkit-min-device-pixel-ratio: 3)
+      and (orientation: landscape) { 
+    
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #05386B !important;
+            width: 100vw !important;
+            overflow-x: hidden;
+            height: fit-content;
+        }
+
+
+        .green-circle {
+            background-color: #05386B;
+            background-image: url("https://edusoftlearning.com/wp-content/uploads/2020/05/tip_2-1080x540.jpg");
+            background-size: .5;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            height: 35rem;
+            width: 35rem;
+            border-radius: 25rem;
+            position: absolute;
+            left: -5rem;
+            top: -18rem;
+        
+        }
+        
+    }
