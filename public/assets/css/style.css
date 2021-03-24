@@ -634,11 +634,11 @@ strong {
         }
         
         li p {
-            font-size: 1.8rem;
+            font-size: 1.3rem;
         }
 
         strong {
-            padding-bottom: .5rem;
-            font-size: 2rem;
+            padding-bottom: 0;
+            font-size: 1.4rem;
         }
     }
