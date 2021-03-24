@@ -500,7 +500,7 @@ li p {
     width: 35rem;
     border-radius: 25rem;
     position: absolute;
-    left: -7rem;
+    left: -5rem;
     top: -33rem;;
 
 };
@@ -511,7 +511,7 @@ li p {
 
 .list-items {
     width: 80%;
-    min-height: 500px;
+    /* min-height: 500px; */
 }
 
 li p {
