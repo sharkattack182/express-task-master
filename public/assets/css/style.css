@@ -111,12 +111,11 @@ form {
     padding: 2rem;
     padding-top: 1rem;
     color: #05386B;
-    font-size: 4rem;
+    /* font-size: 4rem; */
 }
 
 ::placeholder {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.5rem;
     color: #05386B;
     opacity: 70%;
 }
@@ -133,7 +132,7 @@ input {
     background: transparent;
     border-bottom: 1px solid #05386B;
     width: 90%;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-family: 'Source Sans Pro', sans-serif;
     border-image-source: linear-gradient(45deg, #05386B,transparent);
   border-image-slice: 1;
