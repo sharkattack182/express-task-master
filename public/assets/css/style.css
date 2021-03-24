@@ -560,3 +560,22 @@ strong {
 
 
     }
+
+
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+        .green-circle {
+            background-color: #8EE4AF;
+            background-image: url("https://edusoftlearning.com/wp-content/uploads/2020/05/tip_2-1080x540.jpg");
+            background-size: .5;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            height: 35rem;
+            width: 35rem;
+            border-radius: 25rem;
+            position: absolute;
+            left: -6rem;
+            top: -20rem;
+        
+        };
+      }
