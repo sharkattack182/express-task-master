@@ -18,7 +18,7 @@ CSS <img src="https://progress-bar.dev/46">
 ## Links
 [GitHub](https://github.com/sharkattack182/express-task-master)
 <br>
-[Deployed](https://sharkattack182.github.io/express-task-master/.)
+[Deployed](https://express-task-master.herokuapp.com/)
 <br>
 
 ## Visuals
